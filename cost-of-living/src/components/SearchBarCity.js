@@ -1,5 +1,7 @@
 import React, { useState , useEffect, useRef} from "react";
-import "./SearchBar.css";
+import { useSelector, useDispatch } from 'react-redux'
+import { updateYear, removeYear } from './features/inputBars/inputYearSlice.js'
+import "./SearchBarCity.css";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from '@mui/icons-material/Close';
 import SearchBarYear from './SearchBarYear';
@@ -9,9 +11,12 @@ function SearchBar({ placeholder, value}) {
 
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
+
+    const year = useSelector((state) => state.inputYear.value)
+    const dispatch = useDispatch()
+
     const handleFilter = (event) => {
         const searchWord = event.target.value
-        console.log(SearchBarYear.wordEntered)
         setWordEntered(searchWord)
         //const newFilter = data.filter((value) => {
             //console.log(data)

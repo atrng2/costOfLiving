@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import yearReducer from '../components/searchYearSlice'
+import yearReducer from '../components/features/inputBars/inputYearSlice'
 
 export default configureStore({
     reducer: {
-        yearInput: yearReducer,
+        inputYear: yearReducer,
       },
 })

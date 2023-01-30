@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from './components/Header';
-import SearchBar from './components/SearchBar';
+import SearchBarCity from './components/SearchBarCity';
 import SearchBarYear from './components/SearchBarYear';
 import GoButton from "./components/GoButton";
 import Data from './dataIndex.json';
@@ -34,7 +34,7 @@ function App(){
     <Routes>
       <Route path = '/' element = {[ <Header/>, 
       <SearchBarYear placeholder = "Enter the year.. " data = {Data} /> , 
-      <SearchBar placeholder = "Enter a city name.." />,
+      <SearchBarCity placeholder = "Enter a city name.." />,
       <GoButton/> ]} />
 
       <Route path = '/info' element = {<SearchBarYear placeholder = "Enter the year.. " data = {myData} />} />

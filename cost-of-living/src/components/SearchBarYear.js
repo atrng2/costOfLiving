@@ -1,7 +1,7 @@
 import React, { useState , useEffect, useRef} from "react";
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from './searchYearSlice.js'
-import "./SearchBar.css";
+import { updateYear, removeYear } from './features/inputBars/inputYearSlice.js'
+import "./SearchBarYear.css";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -10,14 +10,14 @@ function SearchBarYear({ placeholder, data }) {
  const [filteredData, setFilteredData] = useState([]);
  const [wordEntered, setWordEntered] = useState("");
 
- const count = useSelector((state) => state.yearInput.value)
+ const year = useSelector((state) => state.inputYear.value)
  const dispatch = useDispatch()
  
- //populates the drop down menu 
+ //populates the drop down menu and updates the state of the input 
  const handleFilter = (event) => {
      const searchWord = event.target.value
      setWordEntered(searchWord)
-     dispatch(increment(searchWord))
+     dispatch(updateYear(searchWord))
      const newFilter = Object.keys(data).filter((value) => {
         return value.toLowerCase().includes(searchWord.toLowerCase());
   });
@@ -29,17 +29,19 @@ function SearchBarYear({ placeholder, data }) {
      }
  };
 
- //populate the input from the menu
+ //populates input upon clicking the drop down menu
  const handleClick = (event) =>{
     const searchWord = event.target.innerText
     setWordEntered(searchWord)
     setFilteredData([])
-    dispatch(increment(searchWord))
+    dispatch(updateYear(searchWord))
  };
  
+ //removes input and drop down menu
  const clearInput = () => {
    setFilteredData([]);
    setWordEntered("");
+   dispatch(removeYear());
  }
 
 
