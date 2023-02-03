@@ -4,11 +4,13 @@ import { updateYear, removeYear } from './features/inputBars/inputYearSlice.js'
 import "./SearchBarYear.css";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from '@mui/icons-material/Close';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 function SearchBarYear({ placeholder, data }) {
   
  const [filteredData, setFilteredData] = useState([]);
  const [wordEntered, setWordEntered] = useState("");
+ const [open, setOpen] = useState(false);
 
  const year = useSelector((state) => state.inputYear.value)
  const dispatch = useDispatch()
@@ -30,11 +32,12 @@ function SearchBarYear({ placeholder, data }) {
  };
 
  //populates input upon clicking the drop down menu
- const handleClick = (event) =>{
+ const handleMenuClick = (event) =>{
     const searchWord = event.target.innerText
     setWordEntered(searchWord)
     setFilteredData([])
     dispatch(updateYear(searchWord))
+    
  };
  
  //removes input and drop down menu
@@ -44,27 +47,36 @@ function SearchBarYear({ placeholder, data }) {
    dispatch(removeYear());
  }
 
+  //removes the drop down if clicked outside
+  const handleClickAway = () => {
+    setFilteredData([])
+  };
+
 
 return (
+  
  <div className="search">
    <div className="searchInputs">
-     <input type="text" value = {wordEntered} placeholder={placeholder} onChange={handleFilter}/>
+     <input type="text" value = {year} placeholder={placeholder} onChange={handleFilter}/>
      <div className="searchIcon">
-       {filteredData.length === 0 && wordEntered.length === 0 ? <SearchIcon /> : <CloseIcon id = "clearBtn" onClick = {clearInput}/> }
+       {filteredData.length === 0 && year.length === 0 ? <SearchIcon /> : <CloseIcon id = "clearBtn" onClick = {clearInput}/> }
      </div>
    </div>
    {filteredData.length !== 0 && (
+    <ClickAwayListener onClickAway={handleClickAway}>
    <div className="dataResult">
      {filteredData.slice(0, 7).map((value) => {
        return (
-         <a className="dataItem" onClick={handleClick}>
+         <a className="dataItem" onClick={handleMenuClick}>
            <p> {value} </p>
          </a>
        );
      })}
    </div>
+   </ClickAwayListener>
    )}
  </div>
+ 
 );
 }
 
