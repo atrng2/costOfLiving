@@ -1,0 +1,18 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 30vh;
+  }
+  
+  .grid-container > div {
+    background-color: #f1f1f1;
+    padding: 20px;
+    padding-bottom: 60px;
+    font-size: 15px;
+    margin: 10px;
+    
+  }
+
+  

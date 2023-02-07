@@ -37,7 +37,6 @@ function SearchBarYear({ placeholder, data }) {
     setWordEntered(searchWord)
     setFilteredData([])
     dispatch(updateYear(searchWord))
-    
  };
  
  //removes input and drop down menu
@@ -47,7 +46,7 @@ function SearchBarYear({ placeholder, data }) {
    dispatch(removeYear());
  }
 
-  //removes the drop down if clicked outside
+  //removes the drop down if clicking outside the menu
   const handleClickAway = () => {
     setFilteredData([])
   };

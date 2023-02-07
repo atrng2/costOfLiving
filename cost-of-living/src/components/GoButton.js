@@ -4,8 +4,9 @@ import "./GoButton.css";
 function GoButton(){
 
     return(
-    
-    <button class="button">Search</button>
+    <a href = '/info'>
+        <button class="button">Search</button>
+    </a>
     
     );
 }

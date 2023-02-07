@@ -5,6 +5,7 @@ import SearchBarCity from './components/SearchBarCity';
 import SearchBarYear from './components/SearchBarYear';
 import GoButton from "./components/GoButton";
 import Data from './dataIndex.json';
+import CostByIndexTable from "./components/CostByIndex";
 
 
 
@@ -34,10 +35,10 @@ function App(){
     <Routes>
       <Route path = '/' element = {[ <Header/>, 
       <SearchBarYear placeholder = "Enter the year.. " data = {Data} /> , 
-      <SearchBarCity placeholder = "Enter a city name.." />,
+      <SearchBarCity placeholder = "Enter a city name.." data = {Data}/>,
       <GoButton/> ]} />
 
-      <Route path = '/info' element = {<SearchBarYear placeholder = "Enter the year.. " data = {myData} />} />
+      <Route path = '/info' element = {<CostByIndexTable/>} />
     </Routes>
   
   );
