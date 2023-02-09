@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import "./App.css";
 import Header from './components/Header';
 import SearchBarCity from './components/SearchBarCity';
 import SearchBarYear from './components/SearchBarYear';
 import GoButton from "./components/GoButton";
 import Data from './dataIndex.json';
 import CostByIndexTable from "./components/CostByIndex";
+import Footer from "./components/Footer";
+import BackButton from "./components/BackButton";
 
 
 
@@ -32,14 +35,21 @@ function App(){
   
   return (
     
+    <div class = "App">
+    <Header/>
     <Routes>
-      <Route path = '/' element = {[ <Header/>, 
+      <Route path = '/' element = {[ 
       <SearchBarYear placeholder = "Enter the year.. " data = {Data} /> , 
       <SearchBarCity placeholder = "Enter a city name.." data = {Data}/>,
-      <GoButton/> ]} />
+      <GoButton data = {Data}/> ]} />
 
-      <Route path = '/info' element = {<CostByIndexTable/>} />
+      <Route path = '/info' element = {[<BackButton/>, <CostByIndexTable/>]} />
+      
     </Routes>
+    <Footer/>
+    </div>
+   
+    
   
   );
 
