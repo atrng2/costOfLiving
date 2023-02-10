@@ -5,11 +5,11 @@ import { createSlice } from '@reduxjs/toolkit'
 export const tableSlice = createSlice({
   name: 'tableInput',
   initialState: {
-    value: new Array(8),
+    value: new Array(3),
   },
   reducers: {
     updateTable: (state, action) => {
-      state.value[0] = action.payload
+      state.value = action.payload
     },
     clearTable: (state) => {
       state.value = []
@@ -18,6 +18,6 @@ export const tableSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { updateYear, removeYear } = tableSlice.actions
+export const { updateTable, clearTable} = tableSlice.actions
 
 export default tableSlice.reducer

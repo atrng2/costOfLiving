@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import { useSelector, useDispatch } from 'react-redux'
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from './components/Header';
@@ -6,7 +7,7 @@ import SearchBarCity from './components/SearchBarCity';
 import SearchBarYear from './components/SearchBarYear';
 import GoButton from "./components/GoButton";
 import Data from './dataIndex.json';
-import CostByIndexTable from "./components/CostByIndex";
+import CostByIndexTable from "./components/CostByIndexTable";
 import Footer from "./components/Footer";
 import BackButton from "./components/BackButton";
 
@@ -43,7 +44,7 @@ function App(){
       <SearchBarCity placeholder = "Enter a city name.." data = {Data}/>,
       <GoButton data = {Data}/> ]} />
 
-      <Route path = '/info' element = {[<BackButton/>, <CostByIndexTable/>]} />
+      <Route path = '/info' element = {[<BackButton/>, <CostByIndexTable />]} />
       
     </Routes>
     <Footer/>
