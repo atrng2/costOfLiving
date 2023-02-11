@@ -28,26 +28,6 @@
     font-size: 30px;
   }
 
-  /*
-
-  @media screen and (max-width: 1180px) {
-    .grid-container {
-      grid-template-columns: repeat(2, 200px);
-      margin-top: 15vh;
-    }
-    .grid-container > div {
-    padding: 25px;
-    padding-bottom: 10px;
-    margin: 5px;
-    }
-    .title{
-      margin-top: 5px;
-      font-size: 15px;
-    }
-    .index{
-      margin-top: -10px;
-      font-size: 25px;
-    }
+  .item2 .index{
+    font-size: 23px;
   }
-  
-*/

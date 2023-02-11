@@ -5,7 +5,7 @@ function BackButton(){
 
     return(
     <a href = '/'>
-        <button class="button">Back</button>
+        <button class="button backButton">Back</button>
     </a>
     
     );

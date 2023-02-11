@@ -36,7 +36,7 @@ function GoButton({data}){
     }
 
     return(
-    <a onClick={handleOnClick}>
+    <a class = "searchButton" onClick={handleOnClick}>
         <button class="button">Search</button>
     </a>
     

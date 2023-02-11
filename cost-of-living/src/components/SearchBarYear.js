@@ -54,7 +54,7 @@ function SearchBarYear({ placeholder, data }) {
 
 return (
   
- <div className="search">
+ <div className="search searchYear">
    <div className="searchInputs">
      <input type="text" value = {year} placeholder={placeholder} onChange={handleFilter}/>
      <div className="searchIcon">

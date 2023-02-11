@@ -61,7 +61,7 @@ function SearchBar({ placeholder, data}) {
 
 
   return (
-    <div className="search">
+    <div className="search searchCity">
       <div className="searchInputs">
         <input type="text" value = {wordEntered} placeholder={placeholder} onChange={handleFilter}/>
         <div className="searchIcon">
