@@ -24,7 +24,7 @@ function GoButton({data}){
         }
         else{
             dispatch(updateTable(getInfo(year,city)))
-            navigate("/info")
+            //navigate("/info")
         }
 
     }
@@ -36,9 +36,11 @@ function GoButton({data}){
     }
 
     return(
-    <a class = "searchButton" onClick={handleOnClick}>
-        <button class="button">Search</button>
-    </a>
+    <div class = "searchButton">
+        <a onClick={handleOnClick}>
+            <button class="button">Search</button>
+        </a>
+    </div>
     
     );
 }

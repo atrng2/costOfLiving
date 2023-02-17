@@ -63,7 +63,7 @@ function SearchBar({ placeholder, data}) {
   return (
     <div className="search searchCity">
       <div className="searchInputs">
-        <input type="text" value = {wordEntered} placeholder={placeholder} onChange={handleFilter}/>
+        <input type="text" value = {wordEntered} placeholder={"Enter a city name.."} onChange={handleFilter}/>
         <div className="searchIcon">
           {filteredData.length === 0 && wordEntered.length === 0 ? <SearchIcon /> : <CloseIcon id = "clearBtn" onClick = {clearInput}/> }
         </div>

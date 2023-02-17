@@ -6,10 +6,11 @@ import Header from './components/Header';
 import SearchBarCity from './components/SearchBarCity';
 import SearchBarYear from './components/SearchBarYear';
 import GoButton from "./components/GoButton";
-import Data from './dataIndex.json';
 import CostByIndexTable from "./components/CostByIndexTable";
 import Footer from "./components/Footer";
 import BackButton from "./components/BackButton";
+import Backgroud1 from "./components/BackGroud1";
+
 
 
 
@@ -40,14 +41,11 @@ function App(){
     <Header/>
     <Routes>
       <Route path = '/' element = {[ 
-      <SearchBarYear placeholder = "Enter the year.. " data = {Data} /> , 
-      <SearchBarCity placeholder = "Enter a city name.." data = {Data}/>,
-      <GoButton data = {Data}/> ]} />
+      <Backgroud1/>,]} />
 
       <Route path = '/info' element = {[<BackButton/>, <CostByIndexTable />]} />
       
     </Routes>
-    <Footer/>
     </div>
    
     

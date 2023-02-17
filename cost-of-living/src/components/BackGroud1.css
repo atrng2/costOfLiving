@@ -1,0 +1,29 @@
+.background1{
+    padding-top: 10px;
+}
+
+.searchCity{
+    padding-left: 100px;
+}
+
+.searchYear{
+    padding-right: 100px;
+}
+
+
+@media (max-width: 957px){
+    .background1{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    .searchCity{
+        padding-left: 0px;
+        margin-top: 100px;
+    }
+    .searchYear{
+        padding-right: 0px;
+        
+    }
+    
+}

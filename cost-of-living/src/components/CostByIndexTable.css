@@ -1,19 +1,15 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   align-items: center;
   justify-content: center;
-  padding-top: 20vh;
-  margin-left: 160px;
-  margin-right: 160px;
+  padding-top: 100px;
+  grid-gap: 1rem;
   }
   
   .grid-container > div {
     background-color: #f1f1f1;
-    padding: 5px;
-    margin: 25px;
-    margin-left: 30px;
-    margin-right: 30px;
+    padding-top: 10px;
   }
 
   .title{
@@ -30,4 +26,10 @@
 
   .item2 .index{
     font-size: 23px;
+  }
+
+  @media (min-width: 600px){
+    .grid-container {
+     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
   }
