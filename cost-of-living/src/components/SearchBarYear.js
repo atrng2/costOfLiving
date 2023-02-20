@@ -16,7 +16,6 @@ function SearchBarYear({ placeholder, data }) {
  
  //populates the drop down menu and updates the state of the input 
  const handleFilter = (event) => {
-     console.log(data)
      const searchWord = event.target.value
      setWordEntered(searchWord)
      dispatch(updateYear(searchWord))
@@ -53,7 +52,6 @@ function SearchBarYear({ placeholder, data }) {
 
 
 return (
-  
  <div className="search searchYear">
    <div className="searchInputs">
      <input type="text" value = {year} placeholder={"Enter a year.."} onChange={handleFilter}/>

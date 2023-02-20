@@ -7,7 +7,9 @@ function Footer(){
     return(
     <div class = "footer-container" >
         <footer>
-            {<GitHubIcon />}
+            <a class = "github" href="https://github.com/atrng2/costOfLiving" target="_blank">
+            {<GitHubIcon/>}
+            </a>
         </footer>
     </div>
     );

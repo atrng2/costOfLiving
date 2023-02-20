@@ -19,5 +19,11 @@ a:hover {
 }
 
 .searchButton{
-  
+  margin-top: 50px;
+}
+
+@media (max-width: 957px){
+  .searchButton{
+    margin-top: 80px;
+  }
 }

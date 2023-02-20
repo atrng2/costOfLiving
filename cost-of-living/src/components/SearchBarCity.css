@@ -45,7 +45,6 @@ input:focus{
     margin: auto;
     width: 370px;
     height: 200px;
-    background-color: white;
     overflow: hidden;
     overflow-y: auto;
     position:absolute;
@@ -62,6 +61,7 @@ input:focus{
     display: flex;
     align-items: center;
     color: black;
+    background-color: white;
 }
 
 .dataItem p{
