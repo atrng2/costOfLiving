@@ -1,0 +1,29 @@
+/* CSS */
+
+
+
+a:hover {
+  background:none;
+}
+
+.button {
+  background-color: #28282B;
+  border-radius: 8px;
+  border-style: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+}
+
+.searchButton{
+  margin-top: 50px;
+}
+
+@media (max-width: 957px){
+  .searchButton{
+    margin-top: 80px;
+  }
+}
