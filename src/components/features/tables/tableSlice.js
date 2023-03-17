@@ -5,7 +5,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const tableSlice = createSlice({
   name: 'tableInput',
   initialState: {
-    value: new Array(3),
+    value: new Array(8).fill("n/a"),
   },
   reducers: {
     updateTable: (state, action) => {
