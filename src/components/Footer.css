@@ -1,8 +1,14 @@
 .footer-container{
-    margin-top: 32vh;
+    margin-top: auto;
 }
 
 .github{
     color: black;
     text-decoration: none;
+}
+
+@media (max-width: 1847px){
+    .footer-container{
+        margin-top: 6em;
+    }
 }

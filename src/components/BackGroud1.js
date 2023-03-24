@@ -15,10 +15,9 @@ function BackGroud1(data1){
         {[<SearchBarYear data = {Data}/> , 
         <SearchBarCity data = {Data}/>,
         <GoButton data = {Data}/>,
-        <CostByIndexTable />,
-        <Footer />]}
+        <CostByIndexTable />]}
         </div>
-    
+        
     );
 }
 

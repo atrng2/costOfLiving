@@ -41,9 +41,8 @@ function App(){
     <Header/>
     <Routes>
       <Route path = '/' element = {[ 
-      <Backgroud1/>,]} />
-
-      <Route path = '/info' element = {[<BackButton/>, <CostByIndexTable />]} />
+      <Backgroud1/>,
+      <Footer/>]} />
       
     </Routes>
     </div>
