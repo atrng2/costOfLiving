@@ -7,8 +7,3 @@
     text-decoration: none;
 }
 
-@media (max-width: 1847px){
-    .footer-container{
-        margin-top: 6em;
-    }
-}

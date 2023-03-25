@@ -16,60 +16,60 @@ function CostByIndexTable(){
 
     return(
         <div class ="grid-container">
-            <div class = "item1">
-                {<StarIcon/>}
-                <br></br>
+            <div class = "item item1">
+                <div class = "icon icon1">
+                    {<StarIcon/>}
+                </div>
                 <p class = "title">Rank</p>
-                <br></br>
                 <p class = "index">{table[0]}</p>
             </div>
-            <div class = "item2">
-                {<FlagIcon/>}
-                <br></br>
+            <div class = "item item2">
+                <div class = "icon icon2">
+                    {<FlagIcon/>}
+                </div>
                 <p class = "title">City</p>
-                <br></br>
                 <p class = "index">{table[1]}</p>
             </div>
-            <div class = "item3">
-                {<FavoriteIcon/>}
-                <br></br>
+            <div class = "item item3">
+                <div class = "icon icon3">
+                    {<FavoriteIcon/>}
+                </div>
                 <p class = "title">Cost of Living</p>
-                <br></br>
                 <p class = "index">{table[2]}</p>
             </div>
-            <div class = "item4">
-                {<ApartmentIcon/>}
-                <br></br>
+            <div class = "item item4">
+                <div class = "icon icon4">
+                    {<ApartmentIcon/>}
+                </div>
                 <p class = "title">Rent</p>
-                <br></br>
                 <p class = "index">{table[3]}</p>
             </div>
-            <div class = "item5">
-                {[<FavoriteIcon/>,<ApartmentIcon/>]}
-                <br></br>
+            <div class = "item item5">
+                <div class = "icon icon5">
+                    {[<FavoriteIcon/>,<ApartmentIcon/>]}
+                </div>
                 <p class = "title">Living & Rent</p>
-                <br></br>
                 <p class = "index">{table[4]}</p>
             </div>
-            <div class = "item6">
-                {<LocalGroceryStoreIcon/>}
-                <br></br>
+            <div class = "item item6">
+                <div class = "icon icon6">
+                    {<LocalGroceryStoreIcon/>}
+                </div>
                 <p class = "title">Groceries</p>
-                <br></br>
                 <p class = "index">{table[5]}</p>
             </div>
-            <div class = "item7">
-                {<LocalDiningIcon/>}
-                <br></br>
+            <div class = "item item7">
+                <div class = "icon icon7">
+                    {<LocalDiningIcon/>}
+                </div>
                 <p class = "title">Restaurant</p>
-                <br></br>
                 <p class = "index">{table[6]}</p>
             </div>
-            <div class = "item8">
-                {<PowerSettingsNewIcon/>}
-                <br></br>
+            <div class = "item item8">
+                <div class = "icon icon8">
+                    {<PowerSettingsNewIcon/>}
+                </div>
                 <p class = "title">Purchasing Power</p>
-                <br></br>
                 <p class = "index">{table[7]}</p>
             </div>    
         </div>

@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 120px;
+  margin-bottom: 8em;
   grid-gap: 1rem;
   }
   
@@ -23,6 +24,17 @@
     display: inline-block;
     margin-top: 0px;
     font-size: 30px;
+  }
+
+  .item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .icon{
+    display: inline-block;
   }
 
   .item2 .index{
